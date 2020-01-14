@@ -1,0 +1,66 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+l ctrl+l",
+        "command": "workbench.action.tasks.runTask",
+        "args": "flake8 whole project"
+    },
+    {
+        "key": "f7",
+        "command": "-editor.action.diffReview.next",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+f7",
+        "command": "-editor.action.diffReview.prev",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.editor.nextChange",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f7",
+        "command": "workbench.action.editor.previousChange",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "shift+f7",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "ctrl+meta+up",
+        "command": "workbench.action.navigateUp",
+    },
+    {
+        "key": "ctrl+meta+down",
+        "command": "workbench.action.navigateDown",
+    },
+    {
+        "key": "ctrl+meta+left",
+        "command": "workbench.action.navigateLeft",
+    },
+    {
+        "key": "ctrl+meta+right",
+        "command": "workbench.action.navigateRight",
+    },
+    {
+        "key": "ctrl+meta+,",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+meta+.",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward"
+    }
+]

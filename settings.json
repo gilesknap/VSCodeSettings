@@ -1,0 +1,22 @@
+{
+    "workbench.tree.indent": 30,
+    "window.zoomLevel": 1,
+    "python.testing.pytestEnabled": true,
+    "python.experiments.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "python.formatting.provider": "autopep8",
+    "python.linting.flake8Args": [
+        "--max-line-length=80"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.formatting.autopep8Args": [
+        "--max-line-length=80"
+    ],
+    "gitlens.views.repositories.files.layout": "list",
+    "python.testing.pytestArgs": [
+        "--cov=gphotos"
+    ],
+}
