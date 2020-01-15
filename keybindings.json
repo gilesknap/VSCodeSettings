@@ -57,7 +57,7 @@
         // ctrl meta >
         "key": "ctrl+meta+.",
         "command": "workbench.action.navigateForward"
-    }
+    },
     // zoom one editor panel
     {
         "key": "ctrl+[",
@@ -122,4 +122,32 @@
         "key": "ctrl+alt+j",
         "command": "editor.action.joinLines"
     },
+    {
+        "key": "ctrl+meta+up",
+        "command": "workbench.action.navigateUp",
+    },
+    {
+        "key": "ctrl+meta+down",
+        "command": "workbench.action.navigateDown",
+    },
+    {
+        "key": "ctrl+meta+left",
+        "command": "workbench.action.navigateLeft",
+    },
+    {
+        "key": "ctrl+meta+right",
+        "command": "workbench.action.navigateRight",
+    },
+    {
+        "key": "ctrl+meta+,",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+meta+.",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward"
+    }
 ]

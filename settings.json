@@ -5,7 +5,6 @@
     "workbench.tree.indent": 25,
     "terminal.integrated.fontSize": 12,
     "breadcrumbs.enabled": true,
-
     // general
     "files.exclude": {
         ".pytest_cache": true,
@@ -25,14 +24,12 @@
     "editor.suggestSelection": "first",
     "C_Cpp.updateChannel": "Insiders",
     "restructuredtext.confPath": "${workspaceFolder}/docs",
-
     // git / gitlens
     "git.autofetch": true,
-
     // python
-    "python.testing.unittestEnabled": false,  // default to testing off
+    "python.testing.unittestEnabled": false, // default to testing off
     "python.testing.nosetestsEnabled": false,
-    "python.testing.pytestEnabled": false,    // override this one in the folder if required
+    "python.testing.pytestEnabled": false, // override this one in the folder if required
     "python.pipenvPath": "~/.local/bin/pipenv",
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
@@ -47,12 +44,10 @@
     "python.testing.pytestArgs": [
         "--tb=long"
     ],
-
     // terminals
     "terminals.autorun": true,
     "terminal.integrated.scrollback": 100000,
     "python.formatting.provider": "black",
     "editor.formatOnType": true,
-
     // further (after commments written)
 }
