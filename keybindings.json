@@ -1,0 +1,125 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // navigate terminals -
+    // vscode defaults are already:-
+    //      ctrl shift `   creates new terminal (queries for folder)
+    //      ctrl `         goes to most recent terminal or creates 1st terminal
+    //      ctrl `         while in terminal closes the panel
+    // so we add these two to complete terminal navigation in the same area of the keyboard
+    {
+        "key": "ctrl+1",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    // Terminals: rename and jump to named terminal
+    {
+        "key": "alt+meta+t",
+        "command": "workbench.action.quickOpenTerm"
+    },
+    {
+        "key": "alt+meta+r",
+        "command": "workbench.action.terminal.rename"
+    },
+    // keyboard navigate to any panel
+    {
+        "key": "ctrl+l ctrl+p",
+        "command": "workbench.action.quickOpenView"
+    },
+    // navigation between panes of the IDE
+    {
+        "key": "ctrl+meta+up",
+        "command": "workbench.action.navigateUp",
+    },
+    {
+        "key": "ctrl+meta+down",
+        "command": "workbench.action.navigateDown",
+    },
+    {
+        "key": "ctrl+meta+left",
+        "command": "workbench.action.navigateLeft",
+    },
+    {
+        "key": "ctrl+meta+right",
+        "command": "workbench.action.navigateRight",
+    },
+    // back and forward
+    {
+        // ctrl meta <
+        "key": "ctrl+meta+,",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        // ctrl meta >
+        "key": "ctrl+meta+.",
+        "command": "workbench.action.navigateForward"
+    }
+    // zoom one editor panel
+    {
+        "key": "ctrl+[",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "editor.action.fontZoomIn"
+    },
+    // global layout
+    {
+        "key": "ctrl+shift+3",
+        "command": "workbench.action.editorLayoutThreeColumns"
+    },
+    {
+        "key": "ctrl+shift+2",
+        "command": "workbench.action.editorLayoutTwoColumns"
+    },
+    {
+        "key": "shift+alt+s",
+        "command": "workbench.action.files.saveAll"
+    },
+    // launch tasks
+    {
+        "key": "ctrl+l ctrl+l",
+        "command": "workbench.action.tasks.runTask",
+        "args": "flake8 whole project"
+    },
+    // use F7 to go to next change in gitlens and editor and diff viewer
+    {
+        "key": "f7",
+        "command": "-editor.action.diffReview.next",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+f7",
+        "command": "-editor.action.diffReview.prev",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.editor.nextChange",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f7",
+        "command": "workbench.action.editor.previousChange",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "shift+f7",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible"
+    },
+    // miscellaneous useful commands
+    {
+        "key": "ctrl+alt+j",
+        "command": "editor.action.joinLines"
+    },
+]

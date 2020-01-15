@@ -1,0 +1,58 @@
+{
+    // appearance
+    "window.zoomLevel": 1,
+    "editor.fontSize": 11,
+    "workbench.tree.indent": 25,
+    "terminal.integrated.fontSize": 12,
+    "breadcrumbs.enabled": true,
+
+    // general
+    "files.exclude": {
+        ".pytest_cache": true,
+        "**/__pyc*": true,
+        "**/.idea": true,
+        "**/*.pyc": true,
+        ".history": true,
+        "build": true,
+        "dist": true,
+        "*.egg-info": true,
+    },
+    "files.autoSave": "off",
+    "editor.formatOnSave": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "gitlens.blame.ignoreWhitespace": true,
+    "editor.suggestSelection": "first",
+    "C_Cpp.updateChannel": "Insiders",
+    "restructuredtext.confPath": "${workspaceFolder}/docs",
+
+    // git / gitlens
+    "git.autofetch": true,
+
+    // python
+    "python.testing.unittestEnabled": false,  // default to testing off
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": false,    // override this one in the folder if required
+    "python.pipenvPath": "~/.local/bin/pipenv",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=80"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.pycodestyleEnabled": false,
+    "python.venvFolders": [
+        "/scratch/hgv27681/cache/pipenv/"
+    ],
+    "python.testing.pytestArgs": [
+        "--tb=long"
+    ],
+
+    // terminals
+    "terminals.autorun": true,
+    "terminal.integrated.scrollback": 100000,
+    "python.formatting.provider": "black",
+    "editor.formatOnType": true,
+
+    // further (after commments written)
+}
