@@ -7,14 +7,13 @@
     "breadcrumbs.enabled": true,
     // general
     "files.exclude": {
+        ".history": true,
         ".pytest_cache": true,
+        "*.egg-info": true,
         "**/__pyc*": true,
         "**/.idea": true,
         "**/*.pyc": true,
-        ".history": true,
-        "build": true,
-        "dist": true,
-        "*.egg-info": true,
+        "dist": true
     },
     "files.autoSave": "off",
     "editor.formatOnSave": true,
@@ -27,6 +26,7 @@
     // git / gitlens
     "git.autofetch": true,
     // python
+    "python.terminal.activateEnvironment": false, // prefer to run pipenv in the shell manually
     "python.testing.unittestEnabled": false, // default to testing off
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": false, // override this one in the folder if required
@@ -49,5 +49,7 @@
     "terminal.integrated.scrollback": 100000,
     "python.formatting.provider": "black",
     "editor.formatOnType": true,
+    "cmake.configureOnOpen": false,
+    "cmake.buildDirectory": "${workspaceFolder}/prefix",
     // further (after commments written)
 }
