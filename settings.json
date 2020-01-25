@@ -1,19 +1,35 @@
 {
-    "workbench.tree.indent": 30,
+    // appearance
     "window.zoomLevel": 1,
-    "python.testing.pytestEnabled": true,
-    "python.experiments.enabled": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.formatOnType": true,
+    "editor.fontSize": 11,
+    "workbench.tree.indent": 25,
+    "terminal.integrated.fontSize": 12,
+    "breadcrumbs.enabled": true,
+    "editor.rulers": [
+        88
+    ],
+    // general
+    "files.exclude": {
+        ".history": true,
+        ".pytest_cache": true,
+        "*.egg-info": true,
+        "**/__pyc*": true,
+        "**/.idea": true,
+        "**/*.pyc": true,
+        "dist": true
+    },
+    "files.autoSave": "off",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
-    "python.formatting.provider": "black",
-    "python.linting.flake8Args": [
-        "--max-line-length=88"
-    ],
-    "python.linting.flake8Enabled": true,
-    "gitlens.views.repositories.files.layout": "list",
-    "python.testing.pytestArgs": [],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.suggestSelection": "first",
+    "C_Cpp.updateChannel": "Insiders",
+    "restructuredtext.confPath": "${workspaceFolder}/docs",
+    // git / gitlens
+    "git.autofetch": true,
+    "gitlens.blame.ignoreWhitespace": true,
+    // todo tree
     "todo-tree.general.tags": [
         "BUG",
         "FIXME",
@@ -21,5 +37,32 @@
         "todo",
         "Todo"
     ],
-    "todo-tree.highlights.enabled": true
+    "todo-tree.highlights.enabled": true,
+    // python
+    "python.terminal.activateEnvironment": false, // prefer to run pipenv in the shell manually
+    "python.testing.unittestEnabled": false, // default to testing off
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": false, // override this one in the folder if required
+    "python.pipenvPath": "~/.local/bin/pipenv",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "gitlens.views.repositories.files.layout": "list",
+    "python.linting.flake8Args": [
+        "--max-line-length=88"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.pycodestyleEnabled": false,
+    "python.formatting.provider": "black",
+    "python.testing.pytestArgs": [
+        "--tb=long"
+    ],
+    // terminals
+    "terminals.autorun": true,
+    "terminal.integrated.scrollback": 100000,
+    "editor.formatOnType": true,
+    "cmake.configureOnOpen": false,
+    "cmake.buildDirectory": "${workspaceFolder}/prefix",
+    "window.titleBarStyle": "custom",
+    "terminal.integrated.rendererType": "dom",
+    // further (after commments written)
 }

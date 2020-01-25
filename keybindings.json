@@ -1,10 +1,123 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+    // navigate terminals -
+    // vscode defaults are already:-
+    //      ctrl shift `   creates new terminal (queries for folder)
+    //      ctrl `         goes to most recent terminal or creates 1st terminal
+    //      ctrl `         while in terminal closes the panel
+    // alt arrows are supposed to ove between panes but dont work
+    // so switch to using ctrl arrows
     {
-        "key": "ctrl+l ctrl+l",
+        "key": "alt+down",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "!terminalFocus",
+    },
+    {
+        // todo need a good one for this (maybe needs to be escaped from term?)
+        "key": "alt+pageDown",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "terminalFocus && !terminalFindWidgetVisible",
+    },
+    {
+        "key": "alt+down",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+up",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    // Terminals: rename and jump to named terminal
+    {
+        "key": "alt+meta+t",
+        "command": "workbench.action.quickOpenTerm"
+    },
+    {
+        "key": "alt+meta+r",
+        "command": "workbench.action.terminal.rename"
+    },
+    // keyboard navigate to any panel
+    {
+        "key": "ctrl+l ctrl+p",
+        "command": "workbench.action.quickOpenView"
+    },
+    // navigation between panes of the IDE
+    {
+        "key": "ctrl+meta+up",
+        "command": "workbench.action.navigateUp",
+    },
+    {
+        "key": "ctrl+meta+down",
+        "command": "workbench.action.navigateDown",
+    },
+    {
+        "key": "ctrl+meta+left",
+        "command": "workbench.action.navigateLeft",
+    },
+    {
+        "key": "ctrl+meta+right",
+        "command": "workbench.action.navigateRight",
+    },
+    // back and forward (same as web)
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "meta+alt+left",
+        "command": "workbench.action.navigateToLastEditLocation"
+    },
+    // zoom one editor panel
+    {
+        "key": "ctrl+[",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "editor.action.fontZoomIn"
+    },
+    // global layout
+    {
+        "key": "ctrl+shift+3",
+        "command": "workbench.action.editorLayoutThreeColumns"
+    },
+    {
+        "key": "ctrl+shift+2",
+        "command": "workbench.action.editorLayoutTwoColumns"
+    },
+    {
+        "key": "shift+alt+s",
+        "command": "workbench.action.files.saveAll"
+    },
+    // launch tasks
+    {
+        "key": "ctrl+l l",
         "command": "workbench.action.tasks.runTask",
         "args": "flake8 whole project"
     },
+    {
+        "key": "ctrl+l ctrl+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "CMake arc-detector data"
+    },
+    // use F7 to go to next change in gitlens and editor and diff viewer
     {
         "key": "f7",
         "command": "-editor.action.diffReview.next",
@@ -35,32 +148,77 @@
         "command": "workbench.action.compareEditor.previousChange",
         "when": "textCompareEditorVisible"
     },
+    // line operations
     {
-        "key": "ctrl+meta+up",
-        "command": "workbench.action.navigateUp",
+        "key": "ctrl+alt+j",
+        "command": "editor.action.joinLines"
     },
     {
-        "key": "ctrl+meta+down",
-        "command": "workbench.action.navigateDown",
+        // was ctrl+l but i used that for chords
+        "key": "ctrl+l ctrl+l",
+        "command": "expandLineSelection",
+        "when": "textInputFocus"
+    },
+    // jump to specific panes
+    {
+        "key": "ctrl+e e",
+        "command": "workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
     },
     {
-        "key": "ctrl+meta+left",
-        "command": "workbench.action.navigateLeft",
+        "key": "ctrl+k e",
+        "command": "-workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
     },
     {
-        "key": "ctrl+meta+right",
-        "command": "workbench.action.navigateRight",
+        "key": "ctrl+e f",
+        "command": "workbench.explorer.fileView.focus"
     },
     {
-        "key": "ctrl+meta+,",
-        "command": "workbench.action.navigateBack"
+        "key": "ctrl+e l",
+        "command": "treeLocalHistory.focus"
     },
     {
-        "key": "ctrl+meta+.",
-        "command": "workbench.action.navigateForward"
+        "key": "ctrl+e o",
+        "command": "outline.focus"
     },
     {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward"
+        "key": "ctrl+e p",
+        "command": "workbench.action.problems.focus"
+    },
+    {
+        "key": "ctrl+e g",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm"
+    },
+    {
+        "key": "alt+-",
+        "command": "workbench.action.decreaseViewSize"
+    },
+    {
+        "key": "alt+=",
+        "command": "workbench.action.increaseViewSize"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+pagedown",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    {
+        "key": "ctrl+alt+pageup",
+        "command": "workbench.action.moveEditorToLeftGroup"
     }
+    // UNCOMMENTED
 ]
