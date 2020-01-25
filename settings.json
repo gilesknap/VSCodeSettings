@@ -1,5 +1,7 @@
 {
     // appearance
+    "terminal.integrated.rendererType": "dom",
+    "window.titleBarStyle": "custom",
     "window.zoomLevel": 1,
     "editor.fontSize": 11,
     "workbench.tree.indent": 25,
@@ -62,7 +64,5 @@
     "editor.formatOnType": true,
     "cmake.configureOnOpen": false,
     "cmake.buildDirectory": "${workspaceFolder}/prefix",
-    "window.titleBarStyle": "custom",
-    "terminal.integrated.rendererType": "dom",
     // further (after commments written)
 }
