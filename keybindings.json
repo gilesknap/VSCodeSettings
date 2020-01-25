@@ -5,25 +5,36 @@
     //      ctrl shift `   creates new terminal (queries for folder)
     //      ctrl `         goes to most recent terminal or creates 1st terminal
     //      ctrl `         while in terminal closes the panel
-    // alt arrows are supposed to ove between panes but dont work due to gnome bindings (?)
+    // alt arrows are supposed to ove between panes but dont work
     // so switch to using ctrl arrows
     {
-        "key": "ctrl+down",
+        "key": "alt+down",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "!terminalFocus",
+    },
+    {
+        // todo need a good one for this (maybe needs to be escaped from term?)
+        "key": "alt+pageDown",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "terminalFocus && !terminalFindWidgetVisible",
+    },
+    {
+        "key": "alt+down",
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+right",
+        "key": "alt+right",
         "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+up",
+        "key": "alt+up",
         "command": "workbench.action.terminal.focusPrevious",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+left",
+        "key": "alt+left",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
     },
@@ -58,16 +69,20 @@
         "key": "ctrl+meta+right",
         "command": "workbench.action.navigateRight",
     },
-    // back and forward
+    // back and forward (same as web)
     {
-        // ctrl meta <
-        "key": "ctrl+meta+,",
-        "command": "workbench.action.navigateBack"
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "editorTextFocus"
     },
     {
-        // ctrl meta >
-        "key": "ctrl+meta+.",
-        "command": "workbench.action.navigateForward"
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "meta+alt+left",
+        "command": "workbench.action.navigateToLastEditLocation"
     },
     // zoom one editor panel
     {
@@ -139,26 +154,10 @@
         "command": "editor.action.joinLines"
     },
     {
+        // was ctrl+l but i used that for chords
         "key": "ctrl+l ctrl+l",
         "command": "expandLineSelection",
         "when": "textInputFocus"
-    },
-    // cmake (override use of F7 which I use for next change)
-    {
-        "key": "ctrl+l b",
-        "command": "cmake.build"
-    },
-    {
-        "key": "f7",
-        "command": "-cmake.build"
-    },
-    {
-        "key": "ctrl+l ctrl+shift+b",
-        "command": "cmake.buildWithTarget"
-    },
-    {
-        "key": "shift+f7",
-        "command": "-cmake.buildWithTarget"
     },
     // jump to specific panes
     {
@@ -194,6 +193,32 @@
     {
         "key": "ctrl+shift+g",
         "command": "-workbench.view.scm"
+    },
+    {
+        "key": "alt+-",
+        "command": "workbench.action.decreaseViewSize"
+    },
+    {
+        "key": "alt+=",
+        "command": "workbench.action.increaseViewSize"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+pagedown",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    {
+        "key": "ctrl+alt+pageup",
+        "command": "workbench.action.moveEditorToLeftGroup"
     }
     // UNCOMMENTED
 ]

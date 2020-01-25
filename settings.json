@@ -17,6 +17,9 @@
     },
     "files.autoSave": "off",
     "editor.formatOnSave": true,
+    "editor.rulers": [
+        88
+    ],
     "diffEditor.ignoreTrimWhitespace": false,
     "files.trimTrailingWhitespace": true,
     "gitlens.blame.ignoreWhitespace": true,
@@ -51,5 +54,7 @@
     "editor.formatOnType": true,
     "cmake.configureOnOpen": false,
     "cmake.buildDirectory": "${workspaceFolder}/prefix",
+    "window.titleBarStyle": "custom",
+    "terminal.integrated.rendererType": "dom",
     // further (after commments written)
 }
