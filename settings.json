@@ -14,4 +14,12 @@
     "python.linting.flake8Enabled": true,
     "gitlens.views.repositories.files.layout": "list",
     "python.testing.pytestArgs": [],
+    "todo-tree.general.tags": [
+        "BUG",
+        "FIXME",
+        "TODO",
+        "todo",
+        "Todo"
+    ],
+    "todo-tree.highlights.enabled": true
 }
