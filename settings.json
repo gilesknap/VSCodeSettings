@@ -2,7 +2,7 @@
     // appearance
     "window.zoomLevel": 1,
     "editor.fontSize": 11,
-    "workbench.tree.indent": 25,
+    "workbench.tree.indent": 15,
     "terminal.integrated.fontSize": 12,
     "breadcrumbs.enabled": true,
     // general
@@ -55,6 +55,8 @@
     "cmake.configureOnOpen": false,
     "cmake.buildDirectory": "${workspaceFolder}/prefix",
     "window.titleBarStyle": "custom",
-    "terminal.integrated.rendererType": "dom",
+    "workbench.editor.tabCloseButton": "off",
+    "editor.minimap.enabled": false,
+    "todo-tree.highlights.enabled": true,
     // further (after commments written)
 }
