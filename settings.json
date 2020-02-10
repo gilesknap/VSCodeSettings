@@ -50,7 +50,6 @@
     // terminals
     "terminals.autorun": true,
     "terminal.integrated.scrollback": 100000,
-    "python.formatting.provider": "black",
     "editor.formatOnType": true,
     "cmake.configureOnOpen": false,
     "cmake.buildDirectory": "${workspaceFolder}/prefix",
@@ -58,5 +57,8 @@
     "workbench.editor.tabCloseButton": "off",
     "editor.minimap.enabled": false,
     "todo-tree.highlights.enabled": true,
+    "files.watcherExclude": {
+        ".history": true
+    },
     // further (after commments written)
 }
