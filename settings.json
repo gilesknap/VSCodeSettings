@@ -16,8 +16,8 @@
         "dist": true
     },
     "files.autoSave": "off",
-    "editor.formatOnSave": true,
     "editor.rulers": [
+        80,
         88
     ],
     "diffEditor.ignoreTrimWhitespace": false,
@@ -34,7 +34,6 @@
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": false, // override this one in the folder if required
     "python.pipenvPath": "~/.local/bin/pipenv",
-    "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
         "--max-line-length=80"
@@ -48,11 +47,19 @@
         "--tb=long"
     ],
     // terminals
-    "terminals.autorun": true,
     "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.explorer.fileView.focus",
+        "treeLocalHistory.focus",
+        "outline.focus",
+        "workbench.explorer.problems.focus",
+        "workbench.view.scm",
+        "workbench.explorer.fileView.focus",
+        "workbench.action.navigateBack",
+        "workbench.action.navigateForward"
+    ],
+    // other
     "editor.formatOnType": true,
-    "cmake.configureOnOpen": false,
-    "cmake.buildDirectory": "${workspaceFolder}/prefix",
     "window.titleBarStyle": "custom",
     "workbench.editor.tabCloseButton": "off",
     "editor.minimap.enabled": false,
@@ -60,5 +67,13 @@
     "files.watcherExclude": {
         ".history": true
     },
-    // further (after commments written)
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 100,
+    "timeline.showView": true,
+    "todo-tree.tree.showScanModeButton": false,
+    "debug.console.fontSize": 11,
+    "debug.console.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.scrollBeyondLastLine": false,
+    "update.mode": "manual",
+    "python.formatting.provider": "black",
 }

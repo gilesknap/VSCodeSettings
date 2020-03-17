@@ -24,7 +24,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "alt+right",
+        "key": "ctrl+meta+right",
         "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus"
     },
@@ -34,7 +34,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "alt+left",
+        "key": "ctrl+meta+left",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
     },
@@ -64,21 +64,21 @@
     {
         "key": "ctrl+meta+left",
         "command": "workbench.action.navigateLeft",
+        "when": "!terminalFocus",
     },
     {
         "key": "ctrl+meta+right",
         "command": "workbench.action.navigateRight",
+        "when": "!terminalFocus",
     },
     // back and forward (same as web)
     {
         "key": "alt+right",
-        "command": "workbench.action.navigateForward",
-        "when": "editorTextFocus"
+        "command": "workbench.action.navigateForward"
     },
     {
         "key": "alt+left",
-        "command": "workbench.action.navigateBack",
-        "when": "editorTextFocus"
+        "command": "workbench.action.navigateBack"
     },
     {
         "key": "meta+alt+left",
@@ -179,7 +179,7 @@
         "command": "workbench.explorer.fileView.focus"
     },
     {
-        "key": "ctrl+e l",
+        "key": "ctrl+e h",
         "command": "treeLocalHistory.focus"
     },
     {
@@ -223,6 +223,28 @@
     {
         "key": "ctrl+alt+pageup",
         "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "meta+t",
+        "command": "terminals.runTerminal"
+    },
+    {
+        "key": "ctrl+alt+t",
+        "command": "-terminals.runTerminal"
+    },
+    {
+        "key": "shift+meta+t",
+        "command": "terminals.runTerminals"
+    },
+    {
+        "key": "alt+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
     }
     // UNCOMMENTED
 ]
