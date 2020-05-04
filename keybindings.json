@@ -24,7 +24,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "alt+right",
+        "key": "ctrl+meta+right",
         "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus"
     },
@@ -64,21 +64,21 @@
     {
         "key": "ctrl+meta+left",
         "command": "workbench.action.navigateLeft",
+        "when": "!terminalFocus",
     },
     {
         "key": "ctrl+meta+right",
         "command": "workbench.action.navigateRight",
+        "when": "!terminalFocus",
     },
     // back and forward (same as web)
     {
         "key": "alt+right",
-        "command": "workbench.action.navigateForward",
-        "when": "editorTextFocus"
+        "command": "workbench.action.navigateForward"
     },
     {
         "key": "alt+left",
-        "command": "workbench.action.navigateBack",
-        "when": "editorTextFocus"
+        "command": "workbench.action.navigateBack"
     },
     {
         "key": "meta+alt+left",
